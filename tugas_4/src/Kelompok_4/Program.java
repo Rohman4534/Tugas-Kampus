@@ -1,7 +1,10 @@
 package Kelompok_4;
 import java.util.Scanner;
 class Program {
+    // field "kalimat" agar dapat semua method dapat mengaksesnya
     String kalimat;
+
+    // input sebuah kalimat
     void programInput(){
         Scanner input = new Scanner(System.in);
 
@@ -9,6 +12,7 @@ class Program {
         kalimat = input.nextLine();
     }
 
+    // membuat kalimat menjadi terbalik
     String programBalik(){
         programInput();
         int i;
@@ -23,6 +27,7 @@ class Program {
         return balik;
     }
 
+    // membandingkan kalimat asli dengan kalimat yang sudah dibalik
      void programBanding(){
         String balik = programBalik();
 
@@ -36,6 +41,7 @@ class Program {
         }
     }
 
+    // menampilkan program
     void programTampil(){
         programBanding();
     }
