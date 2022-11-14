@@ -1,18 +1,16 @@
 package Kelompok_4;
 import java.util.Scanner;
 class Program {
-    String programInput(){
+    String kalimat;
+    void programInput(){
         Scanner input = new Scanner(System.in);
-        String kalimat;
-        System.out.print("Masukkan kalimat :");
+
+        System.out.print("Masukkan kalimat : ");
         kalimat = input.nextLine();
-        return kalimat;
     }
 
-
     String programBalik(){
-        String kalimat = programInput();
-
+        programInput();
         int i;
         String balik="";
         char[] data= new char [kalimat.length()];
@@ -21,21 +19,25 @@ class Program {
 
         for (i=data.length-1; i>=0;i--){
             balik +=data[i];
-        }return balik;
+        }
+        return balik;
     }
 
      void programBanding(){
-        String kalimat = programInput();
         String balik = programBalik();
 
         System.out.println("kalimat yang dibalik : "+balik);
-        System.out.println("kalimat aslinya      : "+kalimat);
+        System.out.println("kalimat aslinya      : "+kalimat+"\n");
 
         if (balik.equals(kalimat)){
-            System.out.println("kalimat palindrome");
+            System.out.println("kalimat " +kalimat+ " adalah palindrome");
         }else {
-            System.out.println("bukan kalimat palindrome");
+            System.out.println("kalimat " +kalimat+ " bukanlah palindrome");
         }
+    }
+
+    void programTampil(){
+        programBanding();
     }
 
 

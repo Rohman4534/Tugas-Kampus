@@ -5,6 +5,6 @@ public class Palindrome {
 
         Program mulai = new Program();
 
-        mulai.programBanding();
+        mulai.programTampil();
     }
 }
